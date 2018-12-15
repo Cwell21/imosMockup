@@ -51,18 +51,31 @@ img#imosLogo {
 div#top-page-banner {
   background: linear-gradient(to bottom, rgb(254,254,254), rgb(195,194,194));
   height: 50px;
+  padding-right: 50px;
+  text-align: center;
   width: 100%;
 }
-
 div#top-page-banner h3 {
   display: inline-block;
-  line-height: 50px;
   text-align: center;
-  width: 75%;
+  width: 85%;
+}
+#pinTag {
+  color: rgb(255,10,30);
+  font-size: 1.5rem;
+  margin: 5px 20px 0 0;
+}
 
+div#top-page-banner h3 a {
+  color: rgb(255,10,30);
+  font-family: cursive;
+  font-size: 1.25rem;
+  line-height: 50px;
+  text-decoration: none;
 }
 
 div#top-page-banner button {
+  border: none;
   float: right;
   height: 50px;
   width: 15%;
@@ -96,11 +109,17 @@ nav#top-page-nav > a {
 ******************/
 
 div.slide-show-container {
-
+  background-color: rgb(245,245,245);
   height: 325px;
   width: 100%;
 }
-
+div#slide {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 325px;
+  width: 100%;
+}
 p#tag-banner {
   background-color: rgb(255,10,30);
   color: rgb(245,245,245);
