@@ -12,7 +12,7 @@ const slideImages = [
 // ************** SLIDE SHOW CODE ***************************
 // **********************************************************
 
-var slideIndex = 0;
+var slideIndex = 1;
 //CREATE CONSTANT FOR SLIDE DIV
 const el = document.getElementById("slide");
 const sqrEl = document.getElementById("square-container");
@@ -23,6 +23,7 @@ const sqrEl = document.getElementById("square-container");
     let sqr = document.createElement("div");
     sqr.setAttribute("class", "slide-marker");
     sqrEl.appendChild(sqr);
+    el.style.backgroundImage = "url('./images/slides/slide0.jpg')";
   }
   document.getElementsByClassName("slide-marker")[0].setAttribute("id","marked");
 }());
@@ -33,26 +34,36 @@ function handleSlides() {
   console.log("handleSlides Called....")
   
   let slideMarker = document.getElementsByClassName("slide-marker");
-  
+  el.style.backgroundImage = slideImages[0];
+
+
   function changeSlides() {
    
-    if (slideIndex < slideImages.length && slideIndex > -1) {
+    if (slideIndex < slideImages.length && slideIndex > 0) {
       console.log("ChangeSlide called if....")
       el.style.backgroundImage = slideImages[slideIndex];
       document.getElementById("marked").removeAttribute("id");
       slideMarker[slideIndex].setAttribute("id", "marked");
-      slideIndex += 1;
+      return slideIndex += 1;
     }else {
       console.log("ChangeSlide called else....")
-      // el.style.backgroundImage = slideImages[0];
       slideIndex = 0;
+      el.style.backgroundImage = slideImages[slideIndex];
+      document.getElementById("marked").removeAttribute("id");
+      slideMarker[slideIndex].setAttribute("id", "marked");
+      return slideIndex = 1;
     }
   }
   changeSlides();
 }
 
 //RUN SLIDE SHOW
-setInterval(handleSlides,5000);
+setInterval(() => {
+
+  var x = handleSlides(x);
+
+
+},5000);
 
 // **********************************************************
 // ************** END SLIDE SHOW CODE ***********************

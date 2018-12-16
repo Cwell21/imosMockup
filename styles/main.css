@@ -127,9 +127,9 @@ div.slide-show-container {
   height: 325px;
   position: relative;
   width: 100%;
+  
 }
 div#slide {
-  background-image: url('./images/slides/slide0.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
