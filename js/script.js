@@ -40,6 +40,7 @@ function handleSlides() {
     if (slideIndex < slideImages.length && slideIndex >= 0) {
       console.log("ChangeSlide called if....")
       el.style.backgroundImage = slideImages[slideIndex];
+      document.getElementById("marked").removeAttribute("id");
       slideMarker[slideIndex].setAttribute("id", "marked");
       slideIndex += 1;
     }else {
