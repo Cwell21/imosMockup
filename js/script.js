@@ -24,7 +24,6 @@ const sqrEl = document.getElementById("square-container");
     sqr.setAttribute("class", "slide-marker");
     sqrEl.appendChild(sqr);
   }
-  el.style.backgroundImage = slideImages[0];
   document.getElementsByClassName("slide-marker")[0].setAttribute("id","marked");
 }());
 
@@ -35,10 +34,9 @@ function handleSlides() {
   
   let slideMarker = document.getElementsByClassName("slide-marker");
   
-
   function changeSlides() {
    
-    if (slideIndex < slideImages.length && slideIndex >= 0) {
+    if (slideIndex < slideImages.length && slideIndex > -1) {
       console.log("ChangeSlide called if....")
       el.style.backgroundImage = slideImages[slideIndex];
       document.getElementById("marked").removeAttribute("id");
@@ -46,7 +44,7 @@ function handleSlides() {
       slideIndex += 1;
     }else {
       console.log("ChangeSlide called else....")
-      el.style.backgroundImage = slideImages[0];
+      // el.style.backgroundImage = slideImages[0];
       slideIndex = 0;
     }
   }
