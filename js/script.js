@@ -58,12 +58,7 @@ function handleSlides() {
 }
 
 //RUN SLIDE SHOW
-setInterval(() => {
-
-  var x = handleSlides(x);
-
-
-},5000);
+setInterval(handleSlides,5000);
 
 // **********************************************************
 // ************** END SLIDE SHOW CODE ***********************
