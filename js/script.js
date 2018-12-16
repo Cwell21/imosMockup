@@ -16,6 +16,7 @@ var slideIndex = 1;
 //CREATE CONSTANT FOR SLIDE DIV
 const el = document.getElementById("slide");
 const sqrEl = document.getElementById("square-container");
+const contEl = document.getElementsByClassName("slide-content-module");
 
 //INITIALIZE SLIDESHOW WITH IIFE 
 (function() {
@@ -26,6 +27,7 @@ const sqrEl = document.getElementById("square-container");
     el.style.backgroundImage = "url('./images/slides/slide0.jpg')";
   }
   document.getElementsByClassName("slide-marker")[0].setAttribute("id","marked");
+  contEl[0].style.display = "block";
 }());
 
 //HANDLE SLIDES
@@ -44,6 +46,8 @@ function handleSlides() {
       el.style.backgroundImage = slideImages[slideIndex];
       document.getElementById("marked").removeAttribute("id");
       slideMarker[slideIndex].setAttribute("id", "marked");
+      contEl[slideIndex-1].style.display = "none";
+      contEl[slideIndex].style.display = "block";
       return slideIndex += 1;
     }else {
       console.log("ChangeSlide called else....")
@@ -51,6 +55,8 @@ function handleSlides() {
       el.style.backgroundImage = slideImages[slideIndex];
       document.getElementById("marked").removeAttribute("id");
       slideMarker[slideIndex].setAttribute("id", "marked");
+      contEl[slideImages.length-1].style.display = "none";
+      contEl[slideIndex].style.display = "block";
       return slideIndex = 1;
     }
   }
