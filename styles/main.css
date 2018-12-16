@@ -33,16 +33,18 @@ div.main-wrapper {
   margin-right: auto;
   width: 95%;
 }
+
+/******************
+** LOGO STYLES **
+******************/
 img#imosLogo {
   position: absolute;
   left: 75px;
   top: 15px;
   width: 10%;
-
+  z-index: 1;
 }
-/******************
-** LOGO STYLES **
-******************/
+
 
 
 /******************
@@ -111,6 +113,7 @@ nav#top-page-nav > a {
 div.slide-show-container {
   background-color: rgb(245,245,245);
   height: 325px;
+  position: relative;
   width: 100%;
 }
 div#slide {
@@ -138,6 +141,36 @@ p#tag-banner span:nth-child(2) {
   font-size: 1.25rem;
   margin-left: 25px;
 }
+
+/***********************
+ * SLIDE SQUARE STYLES *
+***********************/
+
+div#square-container {
+  align-items: center;
+  border: 1px solid rgb(75,75,75);
+  border-radius: 5px;
+  bottom: 2%;
+  display: flex;
+  height: 50px;
+  justify-content: space-around;
+  position: absolute;
+  left: 5%;
+  width: 300px;
+  z-index: 2;
+}
+
+div.slide-marker {
+  background-color: rgb(125,125,125);
+  height: 25px;
+  opacity: .75;
+  width: 25px;
+}
+div#marked {
+  background-color: rgb(255,10,30);
+  opacity: 1;
+}
+
 
 /*********************
  * TOP RIBBON STYLES *
