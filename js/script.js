@@ -5,6 +5,7 @@
 const slideImages = [
   "url('./images/slides/slide0.jpg')",
   "url('./images/slides/slide1.jpg')",
+  "url('./images/slides/slide2.png')",
 ];
 
 // **********************************************************
