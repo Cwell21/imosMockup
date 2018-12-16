@@ -1,5 +1,17 @@
 /* STYLESHEET FOR IMO'S PIZZA REMAKE  */
 
+
+/*********************
+** GOOGLE FONT CODE **
+*********************/
+
+/* 
+font-family: 'Courgette', cursive;
+font-family: 'Caveat', cursive;
+font-family: 'Ubuntu Mono', monospace; 
+*/
+
+
 /******************
 ** GLOBAL STYLES **
 ******************/
@@ -134,7 +146,7 @@ p#tag-banner {
 
 p#tag-banner span:first-child {
   font-family: cursive;
-  font-size: 1.25rem;
+  font-size: 1.25rem;<i id="pinTag" class="fas fa-map-marker-alt"></i>
 }
 p#tag-banner span:nth-child(2) {
   font-family: serif;
@@ -196,13 +208,29 @@ section.mid-ribbon {
   padding: 25px 30px 0 30px;
 }
 
-section.mid-ribbon div.mid-panel-mod {
+section.mid-ribbon h2 + p {
+  font-family: 'Courgette', cursive;
+}
 
+div.mid-panel-mod {
+  
   min-width: 33%;
   padding: 10px;
 }
-section.mid-ribbon div.mid-panel-mod img {
+
+div.mid-panel-mod h2 {
+  color: rgb(255,10,30);
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 1.5rem;
+}
+
+div.mid-panel-mod form {
+  margin: 10px 10px 10px 25px;
+}
+
+div.mid-panel-mod img {
   float: right;
+  margin-right: 10%;
   max-width: 25%;
 }
 button#mid-order-button {
@@ -219,7 +247,18 @@ section.bottom-ribbon {
   display: flex;
   justify-content: space-around;
   min-width: 100%;
-  padding: 25px 30px 25px; 30px;
+  padding: 25px 30px 25px 30px;
+}
+div.social-media {  
+  display: flex;  
+  justify-content: space-around;
+    
+}
+
+div.social-media a {
+  color: rgb(255,255,255);
+  font-size: 1.5rem;
+  text-decoration: none;
 }
 
 section.bottom-ribbon > div{
