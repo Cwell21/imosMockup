@@ -18,7 +18,7 @@ font-family: 'Ubuntu Mono', monospace;
 
 *, html {
   box-sizing: border-box;
-  font-size: 1rem;
+ 
 }
 
 body {
@@ -95,6 +95,9 @@ div#top-page-banner button {
   height: 50px;
   width: 15%;
 }
+div#top-page-banner button::after {
+  clear: both;
+}
 
 /******************
 ** NAV  STYLES   **
@@ -117,6 +120,10 @@ nav#top-page-nav > a {
   line-height: 50px;
   text-align: center;
   text-decoration: none;
+}
+
+nav#top-page-nav > a:hover {
+  background-color: rgb(230,230,230);
 }
 
 /******************
@@ -220,22 +227,46 @@ div#marked {
 section.top-ribbon {
   color: rgb(10,10,10);
   display: flex;
+  flex-flow: row wrap;
   font-family: 'Ubuntu Mono', monospace;
   justify-content: space-around;
   min-width: 100%;
   padding-top: 25px;
 }
-#menu {
+.food-display {
+  flex: .33 .33 auto;  
+}
+
+.food-display img {
+  margin:auto;
+  width: 100%;
+}
+.food-display p {
+  margin: 5px 0;
+  text-align: center;
+}
+#menu span{
   font-size: 1.25rem;
+  padding-left: 10px;
+  text-align: center;
+  
 }
 section.top-ribbon a {
   color: rgb(255,10,30);
+  display: inline-block;
   margin-right: 10px;
+  padding-bottom: 10px;
+  text-align: center;
   text-decoration: none;
+  width: 100%;
+
 }
 
 div.food-display a:nth-child(1) {
   font-size: 1.25rem;
+  padding-left: 10px;
+  text-align: left;
+  width: 85%;
 }
 
 /*********************
@@ -245,8 +276,9 @@ div.food-display a:nth-child(1) {
 section.mid-ribbon {
   background-color: rgb(255,255,255);
   display: flex;
+  flex-flow: row nowrap;
   justify-content: space-around;
-  min-width: 100%;
+  width: 100%;
   padding: 25px 30px 0 30px;
 }
 
@@ -260,15 +292,16 @@ section.mid-ribbon h2 + p {
 }
 
 div.mid-panel-mod {
-  
-  min-width: 33%;
+  width: 33%;
   padding: 10px;
+  
 }
 
 div.mid-panel-mod h2 {
   color: rgb(255,10,30);
   font-family: 'Ubuntu Mono', monospace;
   font-size: 1.5rem;
+  
 }
 
 div.mid-panel-mod form {
@@ -299,6 +332,7 @@ section.bottom-ribbon {
 div.social-media {  
   display: flex;  
   justify-content: space-around;
+  
     
 }
 
@@ -309,8 +343,7 @@ div.social-media a {
 }
 
 section.bottom-ribbon > div{
-
-  min-width: 33%;
+  width: 33%;
 }
 
 section.bottom-ribbon div#rewards img{
@@ -324,11 +357,13 @@ div.btn-row {
 }
 
 div.btn-row button#bottom-join {
+  font-size: 1.25rem;
   height: 40px;
-  width: 50%;
+  width: 60%;
 }
 
 button#gift-cards, button#catering {
+  font-size: 1.15rem;
   height: 40px;
   width: 40%;
 }
@@ -422,9 +457,11 @@ ul#terms a {
  * MEDIA QUERIES *
 *********************/
 
-@media screen and (max-width: 1100px) {
-
-
+@media screen and (max-width: 1170px) {
+  
+  /*********************
+  RESPONSIVE SLIDE SHOW
+  **********************/
   section.slide-content-module {
     height: 100%;
     margin: 0;
@@ -432,4 +469,113 @@ ul#terms a {
     top: 0;
     width: 100%;
   }
+}
+
+@media screen and (max-width: 970px) {
+
+  /*********************
+  RESPONSIVE LOGO
+  **********************/
+  img#imosLogo {
+    display: none;
+  }
+
+  /*********************
+  RESPONSIVE TOP HEADER
+  **********************/
+  div#top-page-banner {
+    height: auto;
+    padding: 0;
+    width: 100%;
+  }
+
+  div#top-page-banner h3 {
+    width: 100%;
+  }
+  div#top-page-banner button {
+    float: none;
+    margin-auto;
+    width: 75%;
+
+  }
+
+  /*********************
+  RESPONSIVE NAVIGATION
+  **********************/
+
+  nav#top-page-nav {
+    height: auto;
+    padding: 0;
+    width: 100%;
+  }
+  nav#top-page-nav > a {
+    border: none;
+    min-width: 100%;
+  }
+  
+  p#tag-banner span:nth-child(2) {
+    display: none;
+  }
+
+  /*********************
+  RESPONSIVE TOP RIBBON
+  **********************/
+
+  section.top-ribbon div.food-display {
+   
+  }
+  section.top-ribbon div.food-display img {
+    
+  }
+
+
+/*********************
+  RESPONSIVE MID RIBBON
+  **********************/
+  section.mid-ribbon {
+    flex-flow: column;
+    min-height: auto;
+  }
+  div.mid-panel-mod {
+    min-width: 100%;
+  }
+
+  /*********************
+  RESPONSIVE BOTTOM RIBBON
+  **********************/
+  section.bottom-ribbon {    
+    display: none;
+  }
+
+  /*********************
+  RESPONSIVE BOTTOM NAV
+  **********************/
+  nav.bottom-nav ul{
+    background-color: rgb(230,230,230);
+    display: block;
+  }
+
+  /*********************
+    RESPONSIVE FOOTER
+  **********************/
+  footer {
+    padding: 0;
+  }
+  div.footer-row {
+    margin-bottom: -7%;
+  }
+  nav.footer-nav {
+    display: none;
+  }
+  ul#terms {
+    display: block;
+    width: 100%;
+  }
+  ul#terms li {
+    
+    display: block;    
+  }
+
+
+
 }
