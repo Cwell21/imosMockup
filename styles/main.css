@@ -558,9 +558,7 @@ ul#terms a {
   /*********************
     RESPONSIVE FOOTER
   **********************/
-  footer {
-    padding: 0;
-  }
+  
   div.footer-row {
     margin-bottom: -7%;
   }
@@ -572,8 +570,8 @@ ul#terms a {
     width: 100%;
   }
   ul#terms li {
-    
-    display: block;    
+    display: block;
+    text-align: center;    
   }
 
 
